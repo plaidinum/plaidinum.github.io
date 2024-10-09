@@ -19,34 +19,22 @@
             background-color: transparent; /* Transparent background */
         }
 
-        /* Style for Patreon button */
-        a[data-patreon-widget-type="become-patron-button"] {
-            padding: 10px 20px;
-            border: 2px solid #f96854; /* Adds the border */
-            border-radius: 5px;
-            background-color: #f96854;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            margin-top: 5px; /* Padding between Ko-fi and Patreon button */
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        a[data-patreon-widget-type="become-patron-button"]:hover {
-            background-color: white;
-            color: #f96854; /* Swap colors on hover */
+        /* Add margin below the Ko-fi button */
+        .kofi-button {
+            margin-bottom: 10px; /* 10 pixels of space below the Ko-fi button */
         }
     </style>
 </head>
 <body>
 
     <!-- Ko-fi Button -->
-    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-    <script type='text/javascript'>
-        kofiwidget2.init('Support Me on Ko-fi', '#336699', 'G2G213YZIQ');
-        kofiwidget2.draw();
-    </script>
+    <div class="kofi-button">
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+        <script type='text/javascript'>
+            kofiwidget2.init('Support Me on Ko-fi', '#336699', 'G2G213YZIQ');
+            kofiwidget2.draw();
+        </script>
+    </div>
 
     <!-- Patreon Button -->
     <a href="https://www.patreon.com/bePatron?u=124138931" data-patreon-widget-type="become-patron-button">Become a member!</a>
