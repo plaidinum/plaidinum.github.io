@@ -10,6 +10,7 @@
             --background-color: #ffffff; /* Light theme background */
             --text-color: #333333; /* Light theme text */
             --link-color: #1a73e8; /* Light theme link color */
+            --link-hover-color: #0056b3; /* Light theme link hover color */
             --widget-background: rgba(255, 255, 255, 0.9); /* Light widget background */
             --widget-shadow: rgba(0, 0, 0, 0.1); /* Light theme shadow */
         }
@@ -20,6 +21,7 @@
                 --background-color: #1c1c1c; /* Dark theme background */
                 --text-color: #ffffff; /* Dark theme text */
                 --link-color: #bb86fc; /* Dark theme link color */
+                --link-hover-color: #9f00ff; /* Dark theme link hover color */
                 --widget-background: rgba(34, 34, 34, 0.9); /* Dark widget background */
                 --widget-shadow: rgba(255, 255, 255, 0.1); /* Dark theme shadow */
             }
@@ -55,10 +57,15 @@
             font-weight: bold;
             color: var(--link-color);
             text-decoration: none;
+            padding: 5px 10px; /* Padding around links */
+            border-radius: 5px; /* Slightly rounded corners for links */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
         }
 
         .dailyVerses .bibleVerse a:hover {
-            text-decoration: underline; /* Hover effect for links */
+            background-color: rgba(0, 0, 0, 0.1); /* Light background on hover */
+            color: var(--link-hover-color); /* Change link color on hover */
+            text-decoration: underline; /* Underline on hover */
         }
     </style>
 </head>
