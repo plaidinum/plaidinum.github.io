@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Verse of the Day</title>
+    <style>
+        /* Define CSS variables for colors */
+        :root {
+            --text-color: #333333; /* Light theme text */
+            --link-color: #336699; /* Link color */
+            --widget-background: rgba(255, 255, 255, 0.9); /* Widget background */
+            --widget-shadow: rgba(0, 0, 0, 0.1); /* Light theme shadow */
+            --widget-border: #336699; /* Border color for the widget */
+        }
+
+        /* Dark theme styles */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-color: #ffffff; /* Dark theme text */
+                --widget-background: rgba(34, 34, 34, 0.9); /* Dark widget background */
+                --widget-shadow: rgba(255, 255, 255, 0.1); /* Dark theme shadow */
+                --widget-border: #336699; /* Border color for the widget in dark theme */
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: transparent; /* Make the background transparent */
+            color: var(--text-color);
+            display: flex;
+            justify-content: center; /* Center the widget horizontally */
+            align-items: flex-start; /* Align items to the top */
+        }
+
+        #dailyVersesWrapper {
+            background: var(--widget-background);
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px;
+            box-shadow: 0 4px 15px var(--widget-shadow); /* Soft shadow */
+            max-width: 400px; /* Maximum width for the widget */
+            text-align: center; /* Center text in the widget */
+            border: 2px solid var(--widget-border); /* Border with enhanced contrast */
+            height: auto; /* Height set to auto for content */
+            margin-top: 20px; /* Add margin to create space from the top */
+        }
+
+        /* Global link styles */
+        a {
+            font-weight: bold; /* Bold links */
+            color: #336699; /* Link color */
+            text-decoration: none; /* No underline */
+        }
+
+        a:visited {
+            color: #336699; /* Keep the same color for visited links */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline on hover for better visibility */
+            color: #336699; /* Ensure the link color remains consistent on hover */
+        }
+    </style>
+</head>
+<body>
+    <div id="dailyVersesWrapper"></div>
+    <script async defer src="https://dailyverses.net/get/verse.js?language=web"></script>
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('openalmond', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '#00b9fe',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+</body>
+</html>
