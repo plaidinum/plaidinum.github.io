@@ -49,20 +49,20 @@
             border: 2px solid var(--widget-border); /* Border with enhanced contrast */
         }
 
-        .dailyVerses .bibleVerse {
-            margin-top: 0.5em;
-            font-size: 1.2em; /* Increase font size for better readability */
+        /* Global link styles */
+        a {
+            font-weight: bold; /* Bold links */
+            color: #336699; /* Link color */
+            text-decoration: none; /* No underline */
         }
 
-        .dailyVerses .bibleVerse a {
-            font-weight: bold;
-            color: var(--link-color); /* Set link color to #336699 */
-            text-decoration: none; /* Remove underline */
+        a:visited {
+            color: #336699; /* Keep the same color for visited links */
         }
 
-        .dailyVerses .bibleVerse a:hover {
+        a:hover {
             text-decoration: underline; /* Underline on hover for better visibility */
-            color: var(--link-color); /* Ensure the link color remains consistent on hover */
+            color: #336699; /* Ensure the link color remains consistent on hover */
         }
     </style>
 </head>
