@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fate Core RPG Character Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .character-sheet {
+            border: 2px solid #000;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            margin-top: 20px;
+        }
+        .output h2 {
+            border-bottom: 1px solid #000;
+            margin-bottom: 10px;
+        }
+        .output p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fate Core RPG Character Sheet</h1>
+    <div class="character-sheet">
+        <div class="input-group">
+            <label for="character-name">Character Name</label>
+            <input type="text" id="character-name" placeholder="Enter character name">
+        </div>
+
+        <div class="input-group">
+            <label for="high-concept">High Concept</label>
+            <textarea id="high-concept" placeholder="Describe your high concept"></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="trouble">Trouble</label>
+            <textarea id="trouble" placeholder="Describe your trouble"></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="aspect1">Aspect 1</label>
+            <textarea id="aspect1" placeholder="Enter first aspect"></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="aspect2">Aspect 2</label>
+            <textarea id="aspect2" placeholder="Enter second aspect"></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="aspect3">Aspect 3</label>
+            <textarea id="aspect3" placeholder="Enter third aspect"></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="skills">Skills</label>
+            <textarea id="skills" placeholder="List skills with ratings (e.g., Combat: +4, Agility: +3)"></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="stunts">Stunts</label>
+            <textarea id="stunts" placeholder="List any stunts"></textarea>
+        </div>
+
+        <button onclick="generateCharacter()">Generate Character</button>
+
+        <div class="output" id="character-output">
+            <h2>Generated Character</h2>
+            <p><strong>Name:</strong> <span id="output-name"></span></p>
+            <p><strong>High Concept:</strong> <span id="output-high-concept"></span></p>
+            <p><strong>Trouble:</strong> <span id="output-trouble"></span></p>
+            <p><strong>Aspect 1:</strong> <span id="output-aspect1"></span></p>
+            <p><strong>Aspect 2:</strong> <span id="output-aspect2"></span></p>
+            <p><strong>Aspect 3:</strong> <span id="output-aspect3"></span></p>
+            <p><strong>Skills:</strong> <span id="output-skills"></span></p>
+            <p><strong>Stunts:</strong> <span id="output-stunts"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function generateCharacter() {
+            // Get the input values
+            const name = document.getElementById('character-name').value;
+            const highConcept = document.getElementById('high-concept').value;
+            const trouble = document.getElementById('trouble').value;
+            const aspect1 = document.getElementById('aspect1').value;
+            const aspect2 = document.getElementById('aspect2').value;
+            const aspect3 = document.getElementById('aspect3').value;
+            const skills = document.getElementById('skills').value;
+            const stunts = document.getElementById('stunts').value;
+
+            // Output the values
+            document.getElementById('output-name').innerText = name;
+            document.getElementById('output-high-concept').innerText = highConcept;
+            document.getElementById('output-trouble').innerText = trouble;
+            document.getElementById('output-aspect1').innerText = aspect1;
+            document.getElementById('output-aspect2').innerText = aspect2;
+            document.getElementById('output-aspect3').innerText = aspect3;
+            document.getElementById('output-skills').innerText = skills;
+            document.getElementById('output-stunts').innerText = stunts;
+        }
+    </script>
+
+</body>
+</html>
