@@ -5,12 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bible Verse of the Day</title>
     <style>
+        /* Define CSS variables for colors */
+        :root {
+            --background-color: #ffffff; /* Light theme background */
+            --text-color: #333333; /* Light theme text */
+            --link-color: #1a73e8; /* Light theme link color */
+        }
+
+        /* Dark theme styles */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background-color: #1c1c1c; /* Dark theme background */
+                --text-color: #ffffff; /* Dark theme text */
+                --link-color: #bb86fc; /* Dark theme link color */
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        #dailyVersesWrapper {
+            background: rgba(255, 255, 255, 0.9); /* Slightly transparent background for visibility */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
         .dailyVerses .bibleVerse {
             margin-top: 0.5em;
+            font-size: 1.2em;
         }
 
         .dailyVerses .bibleVerse a {
             font-weight: bold;
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        .dailyVerses .bibleVerse a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
