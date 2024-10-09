@@ -19,26 +19,47 @@
             background-color: transparent; /* Transparent background */
         }
 
-        /* Add margin below the Ko-fi button */
-        .kofi-button {
-            margin-bottom: 10px; /* 10 pixels of space below the Ko-fi button */
+        /* Style for the Patreon button wrapper */
+        .patreon-button-wrapper {
+            border: 2px solid white; /* Border color */
+            border-radius: 5px;
+            background-color: #336699; /* Background color */
+            padding: 10px; /* Padding inside the wrapper */
+            margin-top: 10px; /* Margin above the wrapper */
+            text-align: center; /* Center the button inside the wrapper */
+        }
+
+        /* Style for the Patreon button link */
+        a[data-patreon-widget-type="become-patron-button"] {
+            color: white; /* Text color */
+            text-decoration: none; /* No underline */
+            font-size: 16px; /* Font size */
+            font-weight: bold; /* Bold text */
+            padding: 10px 20px; /* Padding for the button */
+            display: inline-block; /* Inline block for centering */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        a[data-patreon-widget-type="become-patron-button"]:hover {
+            background-color: white; /* Background color on hover */
+            color: #336699; /* Text color on hover */
         }
     </style>
 </head>
 <body>
 
     <!-- Ko-fi Button -->
-    <div class="kofi-button">
-        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-        <script type='text/javascript'>
-            kofiwidget2.init('Support Me on Ko-fi', '#336699', 'G2G213YZIQ');
-            kofiwidget2.draw();
-        </script>
-    </div>
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+    <script type='text/javascript'>
+        kofiwidget2.init('Support Me on Ko-fi', '#336699', 'G2G213YZIQ');
+        kofiwidget2.draw();
+    </script>
 
-    <!-- Patreon Button -->
-    <a href="https://www.patreon.com/bePatron?u=124138931" data-patreon-widget-type="become-patron-button">Become a member!</a>
-    <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+    <!-- Patreon Button Wrapper -->
+    <div class="patreon-button-wrapper">
+        <a href="https://www.patreon.com/bePatron?u=124138931" data-patreon-widget-type="become-patron-button">Become a member!</a>
+        <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+    </div>
 
 </body>
 </html>
