@@ -12,6 +12,7 @@
             --link-color: #336699; /* Link color */
             --widget-background: rgba(255, 255, 255, 0.9); /* Light widget background */
             --widget-shadow: rgba(0, 0, 0, 0.1); /* Light theme shadow */
+            --widget-border: #336699; /* Border color for the widget */
         }
 
         /* Dark theme styles */
@@ -22,6 +23,7 @@
                 --link-color: #336699; /* Link color for dark theme */
                 --widget-background: rgba(34, 34, 34, 0.9); /* Dark widget background */
                 --widget-shadow: rgba(255, 255, 255, 0.1); /* Dark theme shadow */
+                --widget-border: #336699; /* Border color for the widget in dark theme */
             }
         }
 
@@ -44,6 +46,7 @@
             box-shadow: 0 4px 15px var(--widget-shadow); /* Soft shadow */
             max-width: 400px; /* Maximum width for the widget */
             text-align: center; /* Center text in the widget */
+            border: 2px solid var(--widget-border); /* Border with enhanced contrast */
         }
 
         .dailyVerses .bibleVerse {
@@ -53,12 +56,13 @@
 
         .dailyVerses .bibleVerse a {
             font-weight: bold;
-            color: #336699; /* Set link color to #336699 */
+            color: var(--link-color); /* Set link color to #336699 */
             text-decoration: none; /* Remove underline */
         }
 
         .dailyVerses .bibleVerse a:hover {
-            text-decoration: none; /* Ensure no underline on hover */
+            text-decoration: underline; /* Underline on hover for better visibility */
+            color: var(--link-color); /* Ensure the link color remains consistent on hover */
         }
     </style>
 </head>
